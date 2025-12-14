@@ -27,3 +27,27 @@ public:
         return (int)ans;
     }
 };
+
+
+
+//class Solution {
+// public:
+//     int mod = 1e9 + 7;
+//     int numberOfWays(string corridor) {
+//         vector<int> s;
+//         long long ans = 1;
+//         for (int i = 0; i < corridor.length(); i++) {
+//             if (corridor[i] == 'S')
+//                 s.push_back(i);
+//         }
+
+//         if (s.size() == 0 || s.size() % 2 != 0) {
+//             return 0;
+//         }
+//         for (int i = 2; i < s.size(); i += 2) {
+//             int l = s[i] - s[i - 1];
+//             ans = (ans * l) % mod;
+//         }
+//         return ans;
+//     }
+// };
