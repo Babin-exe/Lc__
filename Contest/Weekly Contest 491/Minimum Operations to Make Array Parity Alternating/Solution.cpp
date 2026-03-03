@@ -1,7 +1,7 @@
 // Problem Link : https://leetcode.com/problems/minimum-operations-to-make-array-parity-alternating/description/
 
 /*
-Though process
+Thought process
 
 An array can either go with the sequence [odd,even,odd,even,odd ,even .......]
 or [even, odd , even , odd , even , odd , .......]
