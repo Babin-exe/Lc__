@@ -1,4 +1,7 @@
 
+// Problem Link : https://www.spoj.com/problems/RMQSQ/
+
+
 /*
 
 Sparse Table for Range Minimum Query (RMQ)
@@ -99,6 +102,16 @@ int main()
             m[i][k] = min(m[i][k - 1], m[i + (1 << (k - 1))][k - 1]);
         }
     }
+
+    int q;
+    cin >> q;
+    for (int i = 0; i < q; i++)
+    {
+        int l, r;
+        cin >> l >> r;
+        cout << queryMin(l, r) << "\n";
+    }
+    
 
     return 0;
 }
