@@ -1,4 +1,5 @@
 // Problem Link : https://codeforces.com/problemset/problem/1143/B
+// key insight : (n / 10 ^ k ​) * 10^k − 1
 #include <bits/stdc++.h>
 using namespace std;
 
