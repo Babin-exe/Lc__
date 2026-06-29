@@ -112,6 +112,34 @@ void solve()
         res = res - (res / n);
 
     cout << res << "\n";
+
+
+
+    // 2nd idea to computer upto n 
+
+     vector<ll> toit(n + 1);
+    for (int i = 0; i <= n; i++)
+        toit[i] = i;
+
+    for (int i = 2; i <= n; i++)
+    {
+        if (toit[i] == i)
+        {
+            toit[i] = i - 1;
+
+            for (int j = 2 * i; j <= n; j += i)
+            {
+                toit[j] = (toit[j] / i) * (i - 1);
+            }
+        }
+    }
+
+    for (int i = 0; i <= n; i++)
+        cout << toit[i] << " ";
+
+
+
+    
 }
 
 int main()
