@@ -21,3 +21,15 @@ public:
         return b[n - 1] ^ b[0] == derived[n - 1];
     }
 };
+
+// Approach 2 : 
+class Solution {
+public:
+    bool doesValidArrayExist(vector<int>& derived) {
+        int n = derived.size();
+        int t = derived[0];
+        for (int i = 1; i < n; i++)
+            t ^= derived[i];
+        return t == 0;
+    }
+};
