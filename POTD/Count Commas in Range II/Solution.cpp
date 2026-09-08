@@ -23,3 +23,23 @@ public:
         return ans;
     }
 };
+
+//Simpler approach : 
+using ll = long long;
+class Solution {
+public:
+    long long countCommas(long long n) {
+
+        if (n <= 999) return 0;
+        
+        ll l = 1000;
+        ll ans = 0;
+
+        while (l <= n) {
+            ll count = (n - l + 1);
+            l *= 1000;
+            ans += count;
+        }
+        return ans;
+    }
+};
